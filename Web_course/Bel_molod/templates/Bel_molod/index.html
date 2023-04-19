@@ -19,37 +19,24 @@
         <div class="header__wraper" style="background-image: url({% static 'images/mainimg.jpg' %});">
             <div class="container header__container">
                 <div class="header">
-                    <a class="logo" href="#">
+                    <a class="logo" href="{% url 'home' %}">
                         <img src="{% static 'images/logo.svg' %}" alt="">
                     </a>
                     <ul class="header__nav">
                         <li class="header__btn">
-                            <img src="{% static 'images/nav-btn1.svg' %}" alt="">
+                            <a href=""><img src="{% static 'images/nav-btn1.svg' %}" alt=""></a>
                         </li>
                         <li class="header__btn">
-                            <img src="{% static 'images/nav-btn2.svg' %}" alt="">
+                            <a href="{% url 'testform' %}"><img src="{% static 'images/nav-btn2.svg' %}" alt=""></a>
                         </li>
                     </ul>
                     <div class="header__menu">
                         <ul class="header__menu-list">
+                            {% for m in menu_list %}
                             <li class="header__menu-item">
-                                <a class="header__menu-link header__menu-link_active" href="#">ГЛАВНАЯ</a>
+                                <a class="header__menu-link" href="{% url m.url_name %}">{{ m.text }}</a>
                             </li>
-                            <li class="header__menu-item">
-                                <a class="header__menu-link" href="#events">СОБЫТИЯ</a>
-                            </li>
-                            <li class="header__menu-item">
-                                <a class="header__menu-link" href="#">ПРОЕКТЫ</a>
-                            </li>
-                            <li class="header__menu-item">
-                                <a class="header__menu-link" href="#">СООБЩЕСТВА</a>
-                            </li>
-                            <li class="header__menu-item">
-                                <a class="header__menu-link" href="#">ТРУДОУСТРОЙСТВО МОЛОДЫХ</a>
-                            </li>
-                            <li class="header__menu-item">
-                                <a class="header__menu-link" href="about/">О НАС</a>
-                            </li>
+                            {% endfor %}
                         </ul>
                     </div>
                     <img class="header__decor" src="{% static 'images/Decor1.svg' %}" alt="">

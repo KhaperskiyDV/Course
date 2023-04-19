@@ -20,22 +20,22 @@
         <div class="header__wraper-temp">
             <div class="container">
                 <div class="header-temp">
-                    <a class="logo" href="#">
+                    <a class="logo" href="{% url 'home' %}">
                         <img src="{% static 'images/logo.svg' %}" alt="">
                     </a>
                     <ul class="header__nav">
                         <li class="header__btn">
-                            <img src="{% static 'images/nav-btn1.svg' %}" alt="">
+                            <a href=""><img src="{% static 'images/nav-btn1.svg' %}" alt=""></a>
                         </li>
                         <li class="header__btn">
-                            <img src="{% static 'images/nav-btn2.svg' %}" alt="">
+                            <a href="{% url 'testform' %}"><img src="{% static 'images/nav-btn2.svg' %}" alt=""></a>
                         </li>
                     </ul>
                     <div class="header__menu-temp">
                         <ul class="header__menu-list">
                             {% for m in menu_list %}
                             <li class="header__menu-item">
-                                <a class="header__menu-link" href="''">{{ m }}</a>
+                                <a class="header__menu-link" href="{% url m.url_name %}">{{ m.text }}</a>
                             </li>
                             {% endfor %}
                         </ul>

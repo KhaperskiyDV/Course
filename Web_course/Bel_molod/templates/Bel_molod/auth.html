@@ -5,9 +5,11 @@
 {% block content %}
 <div class="auth__content" style="background-image: url({% static 'images/auth_bg.svg' %});">
     <div class="container">
-        <form class="auth__form">
-            <input class="auth__input-item" type="email" name="E-mail" id="E-mail" placeholder="E-mail">
-            <input class="auth__input-item" type="password" name="Password" id="Password" placeholder="Пароль">
+        <form class="auth__form" action="" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <!-- <input class="auth__input-item" type="email" name="E-mail" id="E-mail" placeholder="E-mail">
+            <input class="auth__input-item" type="password" name="Password" id="Password" placeholder="Пароль"> -->
 
             <button class="auth__form-btn" type="submit">Войти</button>
         </form>

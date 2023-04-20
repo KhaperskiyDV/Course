@@ -1,4 +1,9 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import redirect, render
+from django.contrib.auth.models import User
+from django.contrib import auth
+from django.urls import reverse
+
 from .forms import *
 
 # menu_list = ["ГЛАВНАЯ", "СОБЫТИЯ", "ПРОЕКТЫ", "СООБЩЕСТВА", "ТРУДОУСТРОЙСТВО МОЛОДЫХ", "О НАС"]
@@ -24,17 +29,34 @@ def send(request):
 def regist(request):
     return render(request, 'Bel_molod/regist.html', {'menu_list': menu_list, 'title': 'Регистрация'})
 
-def auth(request):
-    return render(request, 'Bel_molod/auth.html', {'menu_list': menu_list, 'title': 'Авторизация'})
 
 def events(request):
     return render(request, 'Bel_molod/events.html', {'menu_list': menu_list, 'title': 'События'})
+
+
+def userauth(request):
+    if request.method == 'POST':
+        f = UserLoginForm(data=request.POST)
+        if f.is_valid():
+            username = request.POST['username']
+            password = request.POST['password']
+            user = auth.authenticate(username=username, password=password)
+            if user:
+                auth.login(request, user)
+                print('OK')
+                return redirect(reverse('home'))
+    else:
+        f = UserLoginForm()
+    context = {'form': f, 'menu_list': menu_list, 'title': 'Авторизация'}
+    return render(request, 'Bel_molod/auth.html', context)
+
 
 def testform(request):
     if request.method == 'POST':
         f = RegistForm(request.POST)
         if f.is_valid():
-            return redirect ('auth')
+            return redirect('auth')
     else:
         f = RegistForm()
-    return render(request, 'Bel_molod/testform.html', {'form': f, 'menu_list': menu_list, 'title': 'testform'})
+    context = {'form': f, 'menu_list': menu_list, 'title': 'testform'}
+    return render(request, 'Bel_molod/testform.html', context )

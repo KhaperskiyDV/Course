@@ -24,13 +24,24 @@
                         <img src="{% static 'images/logo.svg' %}" alt="">
                     </a>
                     <ul class="header__nav">
+                        {% if user.is_authenticated %}
+                        <li class="header__btn">
+                            <a href="{% url 'auth' %}"><img src="{% static 'images/nav-btn4.svg' %}" alt=""></a>
+                        </li>
+                        <li class="header__btn">
+                            <a href="{% url 'testform' %}"><img src="{% static 'images/nav-btn5.svg' %}" alt=""></a>
+                        </li>                     
+                        {% else %}
                         <li class="header__btn">
                             <a href="{% url 'auth' %}"><img src="{% static 'images/nav-btn1.svg' %}" alt=""></a>
                         </li>
                         <li class="header__btn">
                             <a href="{% url 'testform' %}"><img src="{% static 'images/nav-btn2.svg' %}" alt=""></a>
                         </li>
+                        {% endif %}
                     </ul>
+
+
                     <div class="header__menu-temp">
                         <ul class="header__menu-list">
                             {% for m in menu_list %}

@@ -1,7 +1,5 @@
-
 from django.contrib import admin
-from django.urls import path
-
+from django.urls import path, include
 from Bel_molod.views import *
 
 urlpatterns = [
@@ -9,8 +7,6 @@ urlpatterns = [
     path('', index, name='home'),
     path('about/', about, name='about'),
     path('send/', send, name='send'),
-    path('regist/', regist, name='regist'),
-    path('auth/', userauth, name='auth'),
+    path('users/', include('users.urls', namespace='users')),
     path('events/', events, name='events'),
-    path('testform/', testform, name='testform')
-   ]
+]

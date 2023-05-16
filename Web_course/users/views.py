@@ -33,6 +33,7 @@ def registration(request):
     context = {'form': form, 'menu_list': menu_list, 'title': 'Авторизация'}
     return render(request, 'users/regist.html', context)
 
+
 def logout(request):
     auth.logout(request)
     return redirect(reverse('home'))

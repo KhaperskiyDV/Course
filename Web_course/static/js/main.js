@@ -1,7 +1,7 @@
 const swiper = new Swiper(".mySwiper", {
   effect: 'fade',
   fadeEffect: {
-    crossFade: false
+    crossFade: true
   },  
   navigation: {
       nextEl: ".swiper-button-next",

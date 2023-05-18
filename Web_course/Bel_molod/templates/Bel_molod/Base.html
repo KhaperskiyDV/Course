@@ -30,13 +30,14 @@
                         </li>
                         <li class="header__btn">
                             <a href="#"><img src="{% static 'images/nav-btn5.svg' %}" alt=""></a>
-                        </li>                     
+                        </li>
                         {% else %}
                         <li class="header__btn">
                             <a href="{% url 'users:login' %}"><img src="{% static 'images/nav-btn1.svg' %}" alt=""></a>
                         </li>
                         <li class="header__btn">
-                            <a href="{% url 'users:registration' %}"><img src="{% static 'images/nav-btn2.svg' %}" alt=""></a>
+                            <a href="{% url 'users:registration' %}"><img src="{% static 'images/nav-btn2.svg' %}"
+                                    alt=""></a>
                         </li>
                         {% endif %}
                     </ul>
@@ -66,19 +67,19 @@
                             <h5 class="footer__menu-title">Информация</h5>
                             <ul class="footer__menu-list">
                                 <li class="footer__menu-item">
-                                    <a href="" class="footer__menu-link">Руководство</a>
+                                    <a href="{% url 'plug' %}" class="footer__menu-link">Руководство</a>
                                 </li>
                                 <li class="footer__menu-item">
-                                    <a href="" class="footer__menu-link">Учреждения</a>
+                                    <a href="{% url 'plug' %}" class="footer__menu-link">Учреждения</a>
                                 </li>
                                 <li class="footer__menu-item">
-                                    <a href="" class="footer__menu-link">Официальные документы</a>
+                                    <a href="{% url 'plug' %}" class="footer__menu-link">Официальные документы</a>
                                 </li>
                                 <li class="footer__menu-item">
-                                    <a href="" class="footer__menu-link">Вакансии центра</a>
+                                    <a href="{% url 'plug' %}" class="footer__menu-link">Вакансии центра</a>
                                 </li>
                                 <li class="footer__menu-item">
-                                    <a href="" class="footer__menu-link">Контакты</a>
+                                    <a href="{% url 'plug' %}" class="footer__menu-link">Контакты</a>
                                 </li>
                             </ul>
 
@@ -87,22 +88,24 @@
                             <h5 class="footer__menu-title">Деятельность</h5>
                             <ul class="footer__menu-list">
                                 <li class="footer__menu-item">
-                                    <a href="" class="footer__menu-link">События</a>
+                                    <a href="{% url 'events' %}" class="footer__menu-link">События</a>
                                 </li>
                                 <li class="footer__menu-item">
-                                    <a href="" class="footer__menu-link">Сообщества</a>
+                                    <a href="{% url 'plug' %}" class="footer__menu-link">Сообщества</a>
                                 </li>
                                 <li class="footer__menu-item">
-                                    <a href="" class="footer__menu-link">Трудоустройство молодежи 14-17 лет</a>
+                                    <a href="{% url 'plug' %}" class="footer__menu-link">Трудоустройство молодежи 14-17
+                                        лет</a>
                                 </li>
                                 <li class="footer__menu-item">
-                                    <a href="" class="footer__menu-link">Потдержка молодежных инициатив</a>
+                                    <a href="{% url 'plug' %}" class="footer__menu-link">Потдержка молодежных
+                                        инициатив</a>
                                 </li>
                                 <li class="footer__menu-item">
-                                    <a href="" class="footer__menu-link">Волонтерский штаб</a>
+                                    <a href="{% url 'plug' %}" class="footer__menu-link">Волонтерский штаб</a>
                                 </li>
                                 <li class="footer__menu-item">
-                                    <a href="" class="footer__menu-link">Вопросы и ответы</a>
+                                    <a href="{% url 'plug' %}" class="footer__menu-link">Вопросы и ответы</a>
                                 </li>
                             </ul>
 
@@ -117,7 +120,7 @@
                             <a class="footer__contacts-tel" href="tel:+3845220027">8(38452) 20027, 20688</a>
                         </div>
                         <div class="footer__contacts-btns">
-                            <a class="write__us-btn" href="#">Написать нам</a>
+                            <a class="write__us-btn" href="{% url 'send' %}">Написать нам</a>
                             <a href="#">
                                 <img class="social" src="{% static 'images/telegram.svg' %}" alt="">
                             </a>
@@ -127,8 +130,10 @@
                         </div>
                     </div>
                     <div class="footer_adm-links">
-                        <a class="agbo-link" href="#">Администрация Беловского городского округа</a>
-                        <a class="umpis-link" href="#">Управление молодежной политики и спорта</a>
+                        <a class="agbo-link" href="https://www.belovo42.ru/">Администрация Беловского городского
+                            округа</a>
+                        <a class="umpis-link" href="http://молодежьспортбелово.рф/">Управление молодежной
+                            политики,физической культуры и спорта</a>
                     </div>
                 </div>
             </div>

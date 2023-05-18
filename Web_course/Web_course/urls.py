@@ -9,4 +9,5 @@ urlpatterns = [
     path('send/', send, name='send'),
     path('users/', include('users.urls', namespace='users')),
     path('events/', events, name='events'),
+    path('plug/', plug, name='plug'),
 ]

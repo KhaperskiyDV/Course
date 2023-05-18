@@ -76,7 +76,7 @@
                                 </h5>
                                 <p class="events__cards-date">28.04.2023</p>
                                 <p class="events__cards-place">ДОЛ “Алые паруса”</p>
-                                <a class="events__cards-btn" href="#">Подробнее</a>
+                                <a class="events__cards-btn" href="{% url 'events' %}">Подробнее</a>
                             </li>
                             <li class="events__cards-item" style="background-image: url({% static 'images/studvesna.png' %});">
                                 <h5 class="events__cards-title">
@@ -84,7 +84,7 @@
                                 </h5>
                                 <p class="events__cards-date">07.04.2023 </p>
                                 <p class="events__cards-place">ЦДК Белово</p>
-                                <a class="events__cards-btn" href="#">Подробнее</a>
+                                <a class="events__cards-btn" href="{% url 'events' %}">Подробнее</a>
                             </li>
                             <li class="events__cards-item" style="background-image: url({% static 'images/studvesna.png' %});">
                                 <h5 class="events__cards-title">
@@ -92,7 +92,7 @@
                                 </h5>
                                 <p class="events__cards-date">07.04.2023 </p>
                                 <p class="events__cards-place">ЦДК Белово</p>
-                                <a class="events__cards-btn" href="#">Подробнее</a>
+                                <a class="events__cards-btn" href="{% url 'events' %}">Подробнее</a>
                             </li>
                             <li class="events__cards-item" style="background-image: url({% static 'images/family.png' %});">
                                 <h5 class="events__cards-title">
@@ -100,7 +100,7 @@
                                 </h5>
                                 <p class="events__cards-date">28.04.2023</p>
                                 <p class="events__cards-place">ДОЛ “Алые паруса”</p>
-                                <a class="events__cards-btn" href="#">Подробнее</a>
+                                <a class="events__cards-btn" href="{% url 'events' %}">Подробнее</a>
                             </li>
                         </ul>
                     </div>
@@ -114,7 +114,7 @@
                     <div class="swiper-slide" style="background-image: url({% static 'images/Slide1.jpg' %});">
                         <div class="container">
                             <div class="slider_inner">
-                                <a class="slider__title" href="#">
+                                <a class="slider__title" href="{% url 'plug' %}">
                                     ПРОЕКТЫ
                                 </a>
                             </div>
@@ -124,7 +124,7 @@
                     <div class="swiper-slide" style="background-image: url({% static 'images/Slide2.jpg' %});">
                         <div class="container">
                             <div class="slider_inner">
-                                <a class="slider__title" href="#">
+                                <a class="slider__title" href="{% url 'plug' %}">
                                     КОМАНДА
                                 </a>
                             </div>
@@ -134,7 +134,7 @@
                     <div class="swiper-slide" style="background-image: url({% static 'images/Slide3.jpg' %});">
                         <div class="container">
                             <div class="slider_inner">
-                                <a class="slider__title" href="#">
+                                <a class="slider__title" href="{% url 'plug' %}">
                                     СООБЩЕСТВА
                                 </a>
                             </div>
@@ -157,19 +157,19 @@
                                 <h6 class="work__cards-title">
                                     МОЛОДЕЖНАЯ БИРЖА ТРУДА “СМЕНА”
                                 </h6>
-                                <a class="work__cards-btn" href="#">Вакансии</a>
+                                <a class="work__cards-btn" href="{% url 'plug' %}">Вакансии</a>
                             </li>
                             <li class="work__cards-item" style="background-image: url({% static 'images/work2.jpg' %});">
                                 <h6 class="work__cards-title">
                                     ДОКУМЕНТЫ ДЛЯ ТРУДОУСТРОЙСТВА
                                 </h6>
-                                <a class="work__cards-btn" href="#">Скачать</a>
+                                <a class="work__cards-btn" href="{% url 'plug' %}">Скачать</a>
                             </li>
                             <li class="work__cards-item" style="background-image: url({% static 'images/work3.jpg' %});">
                                 <h6 class="work__cards-title">
                                     ИНФОРМАЦИЯ ДЛЯ РАБОТОДАТЕЛЕЙ
                                 </h6>
-                                <a class="work__cards-btn" href="#">Подробнее</a>
+                                <a class="work__cards-btn" href="{% url 'plug' %}">Подробнее</a>
                             </li>
                         </ul>
                     </div>
@@ -186,19 +186,19 @@
                             <h5 class="footer__menu-title">Информация</h5>
                             <ul class="footer__menu-list">
                                 <li class="footer__menu-item">
-                                    <a href="" class="footer__menu-link">Руководство</a>
+                                    <a href="{% url 'plug' %}" class="footer__menu-link">Руководство</a>
                                 </li>
                                 <li class="footer__menu-item">
-                                    <a href="" class="footer__menu-link">Учреждения</a>
+                                    <a href="{% url 'plug' %}" class="footer__menu-link">Учреждения</a>
                                 </li>
                                 <li class="footer__menu-item">
-                                    <a href="" class="footer__menu-link">Официальные документы</a>
+                                    <a href="{% url 'plug' %}" class="footer__menu-link">Официальные документы</a>
                                 </li>
                                 <li class="footer__menu-item">
-                                    <a href="" class="footer__menu-link">Вакансии центра</a>
+                                    <a href="{% url 'plug' %}" class="footer__menu-link">Вакансии центра</a>
                                 </li>
                                 <li class="footer__menu-item">
-                                    <a href="" class="footer__menu-link">Контакты</a>
+                                    <a href="{% url 'plug' %}" class="footer__menu-link">Контакты</a>
                                 </li>
                             </ul>
 
@@ -207,22 +207,22 @@
                             <h5 class="footer__menu-title">Деятельность</h5>
                             <ul class="footer__menu-list">
                                 <li class="footer__menu-item">
-                                    <a href="" class="footer__menu-link">События</a>
+                                    <a href="{% url 'events' %}" class="footer__menu-link">События</a>
                                 </li>
                                 <li class="footer__menu-item">
-                                    <a href="" class="footer__menu-link">Сообщества</a>
+                                    <a href="{% url 'plug' %}" class="footer__menu-link">Сообщества</a>
                                 </li>
                                 <li class="footer__menu-item">
-                                    <a href="" class="footer__menu-link">Трудоустройство молодежи 14-17 лет</a>
+                                    <a href="{% url 'plug' %}" class="footer__menu-link">Трудоустройство молодежи 14-17 лет</a>
                                 </li>
                                 <li class="footer__menu-item">
-                                    <a href="" class="footer__menu-link">Потдержка молодежных инициатив</a>
+                                    <a href="{% url 'plug' %}" class="footer__menu-link">Потдержка молодежных инициатив</a>
                                 </li>
                                 <li class="footer__menu-item">
-                                    <a href="" class="footer__menu-link">Волонтерский штаб</a>
+                                    <a href="{% url 'plug' %}" class="footer__menu-link">Волонтерский штаб</a>
                                 </li>
                                 <li class="footer__menu-item">
-                                    <a href="" class="footer__menu-link">Вопросы и ответы</a>
+                                    <a href="{% url 'plug' %}" class="footer__menu-link">Вопросы и ответы</a>
                                 </li>
                             </ul>
 
@@ -237,7 +237,7 @@
                             <a class="footer__contacts-tel" href="tel:+3845220027">8(38452) 20027, 20688</a>
                         </div>
                         <div class="footer__contacts-btns">
-                            <a class="write__us-btn" href="#">Написать нам</a>
+                            <a class="write__us-btn" href="{% url 'send' %}">Написать нам</a>
                             <a href="#">
                                 <img class="social" src="{% static 'images/telegram.svg' %}" alt="">
                             </a>
@@ -247,8 +247,8 @@
                         </div>
                     </div>
                     <div class="footer_adm-links">
-                        <a class="agbo-link" href="#">Администрация Беловского городского округа</a>
-                        <a class="umpis-link" href="#">Управление молодежной политики и спорта</a>
+                        <a class="agbo-link" href="https://www.belovo42.ru/">Администрация Беловского городского округа</a>
+                        <a class="umpis-link" href="http://молодежьспортбелово.рф/">Управление молодежной политики,физической культуры и спорта</a>
                     </div>
                 </div>
             </div>
